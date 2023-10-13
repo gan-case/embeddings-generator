@@ -45,7 +45,7 @@ os.makedirs("embeddings", exist_ok=True)
 
 logging.info("Now Processing %d images", len(images))
 
-pool = ProcessPoolExecutor(max_workers=35)
+pool = ProcessPoolExecutor(max_workers=10)
 
 results = pool.map(gen_embedding_json, images)
 pool.shutdown(wait=True)
