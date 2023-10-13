@@ -47,7 +47,7 @@ logging.info("Now Processing %d images", len(images))
 
 pool = ProcessPoolExecutor(max_workers=100)
 
-results = pool.map(, images)
+results = pool.map(gen_embedding_json, images)
 pool.shutdown(wait=True)
 
 
