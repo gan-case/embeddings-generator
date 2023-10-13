@@ -39,7 +39,7 @@ dataset.close
 
 
 os.chdir('CACD2000')
-images = glob.glob(gen_embedding_json'*.jpg')
+images = glob.glob('*.jpg')
 os.makedirs("embeddings", exist_ok=True)
 
 
